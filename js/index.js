@@ -12,12 +12,19 @@ function render() {
   let tableRows = '';
   myLibrary.forEach(book => {
     tableRows += `<tr>
-                  <th class="text-center">${book.id}</th>
-                  <th>${book.title}</th>
-                  <th>${book.author}</th>
-                  <th class="text-center">${book.pages}</th>
-                  <th class="text-center">${book.status ? 'Read' : 'Not yet'}</th>
-                  <th class="text-center">Delete</th>
+                    <th class="text-center">${book.id}</th>
+                    <th>${book.title}</th>
+                    <th>${book.author}</th>
+                    <th class="text-center">${book.pages}</th>
+                    <th class="text-center">
+                      <button type="button" onclick="changeBookStatus(${book.id})">
+                        ${book.status ? 'Read' : 'Not yet'}</th>
+                      </button>
+                    <th class="text-center">
+                      <button type="button" onclick="deleteBookFromLibrary(${book.id})">
+                        Delete
+                      </button>
+                    </th>
                   </tr>`;
   });
   document.getElementById('table-rows').innerHTML = tableRows;
@@ -30,11 +37,33 @@ function addBookToLibrary(){
   let pages = document.getElementById("pages").value;
   let status = document.getElementById("status").checked;
 
+  if(title == ""){
+    window.alert("Title can't be empty"); 
+    title.focus(); 
+    return false;
+  }
+
   let book = new Book(title, author, pages, status);
   myLibrary.push(book);
   render();
 
-  document.getElementById("model").style.display = "none";
+  closeModel();
+}
+
+function deleteBookFromLibrary(id) {
+  console.log(id);
+  myLibrary.forEach(book => {
+    if(book.id == id) myLibrary.splice(myLibrary.indexOf(book), 1);
+  });
+  render();
+}
+
+function changeBookStatus(id) {
+  console.log(id);
+  myLibrary.forEach(book => {
+    if(book.id == id) book.status = !book.status;
+  });
+  render();
 }
 
 function testAddBook(){
@@ -49,5 +78,9 @@ testAddBook();
 
 function openModel(){
   document.getElementById("model").style.display = "block";
+}
+
+function closeModel(){
+  document.getElementById("model").style.display = "none";
 }
 
