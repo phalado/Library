@@ -1,28 +1,45 @@
 .title {
-    margin: 35px 55px;
+  margin: 35px 55px;
 }
 
 .form fieldset{
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .title-books ul{
-    list-style: none;
-    display: flex;
-    margin: 20px 20px;
+  list-style: none;
+  display: flex;
+  margin: 20px 20px;
 }
 
 .title-books li{
-    margin: 15px 60px;
+  margin: 15px 60px;
 }
 
 .books ul{
-    list-style: none;
-    display: flex;
-    margin: 20px 20px;
+  list-style: none;
+  display: flex;
+  margin: 20px 20px;
 }
 
 .books li{
-    margin: 15px 60px;
+  margin: 15px 60px;
+}
+
+.size1-column {
+  width: 5%;
+  /*text-align: center;*/
+}
+
+.size2-column {
+  width: 10%
+}
+
+.size3-column {
+  width: 20%;
+}
+
+.size4-column {
+  width: 50%;
 }

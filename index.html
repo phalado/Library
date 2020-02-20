@@ -11,7 +11,7 @@
     </div>
 
     <div class="row">
-      <form class="column-10 offset-1 d-flex mt-4 form">
+      <form class="col-10 offset-1 d-flex mt-4 form">
         <fieldset>
           <label for="title">Title</label>
           <input type="text" id="title" required>
@@ -35,22 +35,19 @@
     </div>
 
 
-    <div class="main">
-      <table>
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Item</th>
-          <th>Author</th>
-          <th>Pages</th>
-          <th>Status</th>
-        </tr>
-
-        <tr>
-          <td>..</td>
-          <td>..</td>
-        </tr>
-        
+    <div class="main m-4 row">
+      <table class="table table-striped table-dark col-10 offset-1">
+        <thead>
+          <tr class="table-rows">
+            <th class="size1-column text-center">ID</th>
+            <th class="size4-column">Title</th>
+            <th class="size3-column">Author</th>
+            <th class="size1-column text-center">Pages</th>
+            <th class="size2-column text-center">Status</th>
+            <th class="size1-column text-center"></th>
+          </tr>
+        </thead>
+        <tbody id="table-rows"></tbody>
       </table>
     </div>
 
