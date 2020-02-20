@@ -1,4 +1,12 @@
+body{
+  background-color: ghostwhite;
+}
+
 .title {
+  margin: 35px 55px;
+}
+
+.new-book {
   margin: 35px 55px;
 }
 
@@ -42,4 +50,32 @@
 
 .size4-column {
   width: 50%;
+}
+
+#model {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  background-color: #b9b6b6;
+  top: 20%;
+  left: 40%;
+  width: 23%;
+  border-color: black;
+  border-style: inset;
+}
+
+.form label{
+  font-weight: bold;
+}
+
+.form input{
+  width: 100%;
+}
+
+#status {
+  width: 50%;
+}
+
+.form button {
+  margin-bottom: 10px;
 }

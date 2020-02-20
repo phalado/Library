@@ -33,6 +33,8 @@ function addBookToLibrary(){
   let book = new Book(title, author, pages, status);
   myLibrary.push(book);
   render();
+
+  document.getElementById("model").style.display = "none";
 }
 
 function testAddBook(){
@@ -45,5 +47,7 @@ function testAddBook(){
 
 testAddBook();
 
-
+function openModel(){
+  document.getElementById("model").style.display = "block";
+}
 

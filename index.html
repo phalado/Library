@@ -6,22 +6,23 @@
     <link rel="stylesheet" href="./css/custom.css" />
   </head>
   <body>
+    <div>
     <div class="title">
     <h2>Library</h2>
     </div>
-
-    <div class="row">
-      <form class="col-10 offset-1 d-flex mt-4 form">
+    
+    <div id="model">
+      <form class="col-10 offset-1 mt-4 form">
         <fieldset>
-          <label for="title">Title</label>
+          <label for="title">Title</label><br>
           <input type="text" id="title" required>
         </fieldset>
         <fieldset>
-          <label for="author">Author</label>
+          <label for="author">Author</label><br>
           <input type="text" id="author">
         </fieldset>
         <fieldset>
-          <label for="pages">Number of pages</label>
+          <label for="pages">Number of pages</label><br>
           <input type="number" id="pages">
         </fieldset>
         <fieldset>
@@ -34,6 +35,11 @@
       </form>
     </div>
 
+    <div class="new-book"> 
+      <button type="button" id="submit" onclick="openModel()">
+        New Book
+      </button>
+    </div>
 
     <div class="main m-4 row">
       <table class="table table-striped table-dark col-10 offset-1">
@@ -50,7 +56,7 @@
         <tbody id="table-rows"></tbody>
       </table>
     </div>
-
+    
     <script src="js/index.js"></script>
   </body>
 </html>
